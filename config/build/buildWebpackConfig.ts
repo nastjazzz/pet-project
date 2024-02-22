@@ -1,22 +1,20 @@
-import webpack from 'webpack';
+import webpack from "webpack";
 
-import { buildLoaders } from './buildLoaders';
-import { buildResolvers } from './buildResolvers';
-import { buildPlugins } from './buildPlugins';
-import { buildDevServer } from './buildDevServer';
+import { buildLoaders } from "./buildLoaders";
+import { buildResolvers } from "./buildResolvers";
+import { buildPlugins } from "./buildPlugins";
+import { buildDevServer } from "./buildDevServer";
 
-import { BuildOptions } from './types/config';
+import { BuildOptions } from "./types/config";
 
-export function buildWebpackConfig(
-    options: BuildOptions
-): webpack.Configuration {
+export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
     const { mode, paths, isDev } = options;
 
     return {
         mode: mode,
         entry: paths.entry,
         output: {
-            filename: '[name].[contenthash].js',
+            filename: "[name].[contenthash].js",
             path: paths.build,
             // для того, чтобы старые файлы удалялись
             clean: true,
@@ -27,9 +25,9 @@ export function buildWebpackConfig(
             rules: buildLoaders(options),
         },
         // вот тут мы указываем расширения файлов, которые не надо будет писать при импортах
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         plugins: buildPlugins(paths),
-        devtool: isDev ? 'inline-source-map' : undefined,
+        devtool: isDev ? "inline-source-map" : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
     };
 }
