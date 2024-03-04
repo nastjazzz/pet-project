@@ -1,0 +1,65 @@
+.themeSwitcher {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    border: 1px solid #dedede;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+
+.input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 50%;
+    background-image: url("/src/shared/assets/img/sun.svg");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+.input:checked + .slider:before {
+    -webkit-transform: translateX(35px);
+    -ms-transform: translateX(35px);
+    transform: translateX(35px);
+    background-color: #000;
+
+    background-size: 100% 100%;
+    background-image: url("/src/shared/assets/img/moon.svg");
+}

@@ -1,3 +1,4 @@
 import { classNames } from "./lib/helpers/classNames/classNames";
+import { AppLink, AppLinkTheme } from "./ui/AppLink/AppLink";
 
-export { classNames };
+export { classNames, AppLink, AppLinkTheme };

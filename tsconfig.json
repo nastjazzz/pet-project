@@ -25,6 +25,7 @@
       // можно писать import React from 'react'
       "allowSyntheticDefaultImports": true,
     },
+    //"include": ["./src/app/types/global.d.ts"],
     "ts-node": {
       "compilerOptions": {
         "module": "CommonJS"
