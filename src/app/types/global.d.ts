@@ -13,3 +13,6 @@ declare module "*.svg" {
 }
 declare module "*.png";
 declare module "*.jpg";
+
+// const from webpack config
+declare const __IS_DEV__: boolean;

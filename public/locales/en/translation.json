@@ -1,0 +1,11 @@
+{
+    "navbar": {
+        "mainPage": "Main",
+        "aboutPage": "About"
+    },
+    "sidebar": {
+        "toggle": "Roll up",
+        "toggleCollapsed": "Unroll"
+    },
+    "language": "English"
+}
