@@ -12,7 +12,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
     return (
         <>
-            <label className={classNames(cls.switch, {}, [])}>
+            <label className={classNames(cls.sliderWrapper, {}, [])}>
                 <input type="checkbox" className={classNames(cls.input)} />
                 <span className={classNames(cls.slider, {}, ["round"])} onClick={toggleTheme}></span>
             </label>
