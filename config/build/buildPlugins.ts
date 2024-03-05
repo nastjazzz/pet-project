@@ -19,7 +19,8 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(options.isDev),
         }),
-        options.isDev && new ReactRefreshWebpackPlugin(),
-        options.isDev && new webpack.HotModuleReplacementPlugin(),
+        // TODO don't need them in production
+        new ReactRefreshWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
     ];
 }
