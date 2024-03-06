@@ -10,9 +10,7 @@
 :root {
     --slider-wrapper-width: 70px;
     --slider-wrapper-height: 35px;
-
     --slider-border-radius: 35px;
-
     --slider-circle-size: 28px;
     --slider-transition: 0.3s;
 }
@@ -40,12 +38,11 @@
     cursor: pointer;
     background-color: var(--secondary-color);
     border-radius: var(--slider-border-radius);
-    -webkit-transition: var(--slider-transition);
     transition: var(--slider-transition);
 }
 
 /* circle inside */
-.slider:before {
+.slider::before {
     content: "";
     position: absolute;
     left: 3px;
@@ -59,7 +56,6 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: translateY(-50%);
-    -webkit-transition: var(--slider-transition);
     transition: var(--slider-transition);
 }
 
@@ -68,12 +64,9 @@
     background-color: var(--primary-color);
 }
 
-.input:checked + .slider:before {
-    -webkit-transform: translateX(var(--slider-wrapper-height));
-    -ms-transform: translateX(var(--slider-wrapper-height));
+.input:checked + .slider::before {
     transform: translateX(var(--slider-wrapper-height)) translateY(-50%);
     background-color: #000;
-
     background-size: 100%;
     background-image: url("/src/shared/assets/img/moon.svg");
 }
