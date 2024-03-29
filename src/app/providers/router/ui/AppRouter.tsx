@@ -6,7 +6,16 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 const AppRouter = () => (
     <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-            {Object.values(routeConfig).map(({ element, path }) => <Route key={path} path={path} element={<div className="page-wrapper">{element}</div>} />)}
+            {
+                Object.values(routeConfig)
+                    .map((routeData) => (
+                        <Route
+                            key={routeData.path}
+                            path={routeData.path}
+                            element={<div className="page-wrapper">{routeData.element}</div>}
+                        />
+                    ))
+            }
         </Routes>
     </Suspense>
 );

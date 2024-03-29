@@ -3,6 +3,8 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { type BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+    const { isDev } = options;
+
     // for extraction translations into separate file
     const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
@@ -11,7 +13,16 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             loader: 'babel-loader',
             options: {
                 presets: ['@babel/preset-env'],
-                plugins: [['i18next-extract', { nsSeparator: '~', locales: ['en', 'ru'], keyAsDefaultValue: true }]],
+                plugins: [
+                    [
+                        'i18next-extract',
+                        {
+                            nsSeparator: '~',
+                            locales: ['en', 'ru'],
+                            keyAsDefaultValue: true,
+                        },
+                    ],
+                ],
             },
         },
     };
@@ -47,7 +58,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const sassLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // 'css-loader',
             {
                 loader: 'css-loader',
@@ -57,7 +68,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                         mode: 'local',
                         // TODO заменить на регулярку
                         auto: (filePath: string) => Boolean(filePath.includes('.module.')),
-                        localIdentName: options.isDev ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+                        localIdentName: isDev ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
                     },
                 },
             },
