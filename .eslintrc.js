@@ -38,19 +38,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-
-        // "@typescript-eslint/semi": ["error", "always"],
-        // "@typescript-eslint/comma-dangle": [
-        //     "error",
-        //     {
-        //         arrays: "always-multiline",
-        //         objects: "always-multiline",
-        //         imports: "never",
-        //         exports: "never",
-        //         functions: "always-multiline",
-        //     },
-        // ],
-        // "space-before-function-paren": "off",
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,
