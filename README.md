@@ -1,6 +1,11 @@
+## * It's not finished yet *
+<br/>
+<br/>
+<br/>
+
 ## About
 
-This project is designed using the FSD methodology. It is written in React and Typscript. The project is built using the Webpack.
+This project is designed using the FSD methodology. It is written in React and Typescript. The project is built using the Webpack.
 
 <ul>
     <b>The project includes next features: </b>
