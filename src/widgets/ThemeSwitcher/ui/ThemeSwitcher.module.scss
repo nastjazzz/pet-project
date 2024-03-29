@@ -22,12 +22,6 @@
     height: var(--slider-wrapper-height);
 }
 
-.input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
 /* slider */
 .slider {
     position: absolute;
@@ -43,7 +37,7 @@
 
 /* circle inside */
 .slider::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 3px;
     top: 50%;
@@ -51,7 +45,7 @@
     height: var(--slider-circle-size);
     background-color: white;
     border-radius: 50%;
-    background-image: url("/src/shared/assets/img/sun.svg");
+    background-image: url('/src/shared/assets/img/sun.svg');
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,13 +54,13 @@
 }
 
 /* switched to the dark theme */
-.input:checked + .slider {
+.slider.isActive {
     background-color: var(--primary-color);
 }
 
-.input:checked + .slider::before {
+.slider.isActive::before {
     transform: translateX(var(--slider-wrapper-height)) translateY(-50%);
     background-color: #000;
     background-size: 100%;
-    background-image: url("/src/shared/assets/img/moon.svg");
+    background-image: url('/src/shared/assets/img/moon.svg');
 }

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { classNames } from 'shared';
 
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -8,16 +9,22 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
+    const [isActive, setIsActive] = useState(false);
     const { toggleTheme } = useTheme();
 
+    const toggleSwitcher = () => {
+        toggleTheme();
+        setIsActive((prev) => !prev);
+    };
+
     return (
-        <label className={classNames(cls.sliderWrapper, {}, [])} htmlFor="themeSlider">
-            <input type="checkbox" className={classNames(cls.input)} name="themeSlider" />
+        <div className={classNames(cls.sliderWrapper, {}, [])}>
+            {/* <input type="checkbox" className={classNames(cls.input)} name="themeSlider" /> */}
             <span
-                className={classNames(cls.slider, {}, ['round'])}
-                onClick={toggleTheme}
+                className={classNames(cls.slider, { [cls.isActive]: isActive }, [])}
+                onClick={toggleSwitcher}
                 role="button"
             />
-        </label>
+        </div>
     );
 };
