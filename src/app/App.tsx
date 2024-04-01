@@ -10,6 +10,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import { classNames } from 'shared/';
 
 import './styles/index.scss';
+import { PageLoader } from 'widgets/PageLoader';
 
 const App: FC = () => {
     const { theme } = useTheme();

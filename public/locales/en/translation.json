@@ -7,5 +7,7 @@
         "toggle": "Roll up",
         "toggleCollapsed": "Unroll"
     },
-    "language": "English"
+    "language": "English",
+    "NotFoundPage": "Page was not found",
+    "Loading": "Loading..."
 }
