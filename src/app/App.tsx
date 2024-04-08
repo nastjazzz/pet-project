@@ -1,5 +1,5 @@
 // TODO update react up to 18
-import { type FC, Suspense } from 'react';
+import { type FC, Suspense, useEffect } from 'react';
 import { AppRouter } from 'app/providers/router/';
 import { useTheme } from 'app/providers/ThemeProvider';
 
@@ -10,7 +10,6 @@ import { Sidebar } from 'widgets/Sidebar';
 import { classNames } from 'shared/';
 
 import './styles/index.scss';
-import { PageLoader } from 'widgets/PageLoader';
 
 const App: FC = () => {
     const { theme } = useTheme();

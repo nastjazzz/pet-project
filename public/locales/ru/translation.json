@@ -1,13 +1,16 @@
 {
-    "navbar": {
-        "mainPage": "Главная",
-        "aboutPage": "О сайте"
-    },
-    "sidebar": {
-        "toggle": "Свернуть",
-        "toggleCollapsed": "Развернуть"
-    },
-    "language": "Русский",
-    "NotFoundPage": "Страница не найдена",
-    "Loading": "Загрузка..."
+  "navbar": {
+    "mainPage": "Главная",
+    "aboutPage": "О сайте"
+  },
+  "sidebar": {
+    "toggle": "Свернуть",
+    "toggleCollapsed": "Развернуть"
+  },
+  "language": "Русский",
+  "NotFoundPage": "Страница не найдена",
+  "Loading": "Загрузка...",
+  "PageError": "Произошла непредвиденная ошибка",
+  "UpdatePage": "Обновить страницу",
+  "ThrowError": "Пробросить ошибку"
 }

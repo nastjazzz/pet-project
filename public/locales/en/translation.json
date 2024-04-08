@@ -1,13 +1,16 @@
 {
-    "navbar": {
-        "mainPage": "Main",
-        "aboutPage": "About"
-    },
-    "sidebar": {
-        "toggle": "Roll up",
-        "toggleCollapsed": "Unroll"
-    },
-    "language": "English",
-    "NotFoundPage": "Page was not found",
-    "Loading": "Loading..."
+  "navbar": {
+    "mainPage": "Main",
+    "aboutPage": "About"
+  },
+  "sidebar": {
+    "toggle": "Roll up",
+    "toggleCollapsed": "Unroll"
+  },
+  "language": "English",
+  "NotFoundPage": "Page was not found",
+  "Loading": "Loading...",
+  "PageError": "Something went wrong",
+  "UpdatePage": "Reload page",
+  "ThrowError": "Throw error"
 }
