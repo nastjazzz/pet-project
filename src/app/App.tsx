@@ -1,5 +1,5 @@
 // TODO update react up to 18
-import { type FC, Suspense, useEffect } from 'react';
+import { type FC, Suspense } from 'react';
 import { AppRouter } from 'app/providers/router/';
 import { useTheme } from 'app/providers/ThemeProvider';
 

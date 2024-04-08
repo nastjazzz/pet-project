@@ -67,7 +67,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                     modules: {
                         mode: 'local',
                         // TODO заменить на регулярку
-                        auto: (filePath: string) => Boolean(filePath.includes('.module.')),
+                        auto: (filePath: string) => { return Boolean(filePath.includes('.module.')); },
                         localIdentName: isDev ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
                     },
                 },

@@ -3,12 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import { Button } from 'shared';
 
-interface BugButtonProps {
-    className?: string;
-}
-
 // just for test
-export const BugButton = ({ className }: BugButtonProps) => {
+export const BugButton = () => {
     const [error, setError] = useState(false);
     const { t } = useTranslation();
 

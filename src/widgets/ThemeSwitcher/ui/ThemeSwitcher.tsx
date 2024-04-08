@@ -14,7 +14,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
 
     const toggleSwitcher = () => {
         toggleTheme();
-        setIsActive((prev) => !prev);
+        setIsActive((prev) => { return !prev; });
     };
 
     return (
