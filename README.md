@@ -1,6 +1,5 @@
-## * It's not finished yet *
-<br/>
-<br/>
+## _ It's not finished yet _
+
 <br/>
 
 ## About
@@ -8,7 +7,7 @@
 This project is designed using the FSD methodology. It is written in React and Typescript. The project is built using the Webpack.
 
 <ul>
-    <b>The project includes next features: </b>
+    <b>This project includes next features: </b>
     <li> Theme Switcher</li>
     <li> Language Switcher</li>
     <li> ...</li>
