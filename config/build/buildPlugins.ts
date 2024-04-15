@@ -7,7 +7,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { type BuildOptions } from './types/config';
 
 export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             // тут указывается шаблон по которму будет собираться html
@@ -22,9 +22,17 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
         }),
         // TODO don't need them in production
         new ReactRefreshWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
+        
     ];
+    
+    if (options.isDev) {
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
+            new webpack.HotModuleReplacementPlugin(),
+        )
+    }
+
+    return plugins
 }
