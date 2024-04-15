@@ -7,37 +7,37 @@ on:
 jobs:
     integration:
         runs-on: ubuntu-latest
-        stagedy:
+        strategy:
             matrix:
                 node-version: [16.x]
         steps:
             - name: Setup Node.js environment
-            uses: actions/setup-node@v4
-                with:
-                    node-version: ${{ matrix.node }}
+              uses: actions/setup-node@v4
+              with:
+                node-version: ${{ matrix.node }}
 
             - name: Cache node_modules
-                uses: actions/cache@v2.1.0
-                with:
-                    # A list of files, directories, and wildcard patterns to cache and restore
-                    path: node_modules
-                    # An explicit key for restoring and saving the cache
-                    key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+              uses: actions/cache@v2.1.0
+              with:
+                  # A list of files, directories, and wildcard patterns to cache and restore
+                  path: node_modules
+                  # An explicit key for restoring and saving the cache
+                  key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
 
             - name: Install dependencies
-                if: steps.cache.outputs.cache-hit != 'true'
-                run: npm install
+              if: steps.cache.outputs.cache-hit != 'true'
+              run: npm install
             
             - name: Build production project
-                run: npm run build:prod
+              run: npm run build:prod
             
             - name: Lint typescript
-                run: npm run lint
+              run: npm run lint
 
             - name: Lint css
-                run: npm run stylelint
+              run: npm run stylelint
             
             - name: Run unit test
-                run: npm run test:unit
+              run: npm run test:unit
 
 
