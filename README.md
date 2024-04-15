@@ -17,8 +17,8 @@ This project is designed using the FSD methodology. It is written in React and T
 
 ## Commands
 
-<b>npm run start</b> - start project
-
-<b>npm run build:dev</b> - build dev project
-
-<b>npm run build:prod</b> - build prod project
+<b>npm run start</b> - start project <br/>
+<b>npm run build:dev</b> - build dev project <br/>
+<b>npm run build:prod</b> - build prod project <br/>
+<b>npm run test:unit</b> - run jest tests <br/>
+<b>npm run storybook</b> - run storybook <br/>
