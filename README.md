@@ -10,6 +10,8 @@ This project is designed using the FSD methodology. It is written in React and T
     <b>This project includes next features: </b>
     <li> Theme Switcher</li>
     <li> Language Switcher</li>
+    <li> Storybook/li>
+    <li> Tests written on Jest/li>
     <li> ...</li>
 </ul>
 
