@@ -10,20 +10,20 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [16.15.0]
+                node-version: [16.x]
         steps:
             - name: Setup Node.js environment
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v2
               with:
                 node-version: ${{ matrix.node }}
 
-            - name: Cache node_modules
-              uses: actions/cache@v2.1.0
-              with:
-                  # A list of files, directories, and wildcard patterns to cache and restore
-                  path: node_modules
-                  # An explicit key for restoring and saving the cache
-                  key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+            # - name: Cache node_modules
+            #   uses: actions/cache@v2.1.0
+            #   with:
+            #       # A list of files, directories, and wildcard patterns to cache and restore
+            #       path: node_modules
+            #       # An explicit key for restoring and saving the cache
+            #       key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
 
             - name: Install dependencies
               if: steps.cache.outputs.cache-hit != 'true'
