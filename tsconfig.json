@@ -32,5 +32,5 @@
             //"jsx": "react-jsx"
         }
     },
-    "include": ["./config/jest/jest.config.ts"]
+    "include": ["./config/jest/jest.config.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }

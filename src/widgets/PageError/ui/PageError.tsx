@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Button, classNames } from 'shared';
 
 import { useTranslation } from 'react-i18next';
@@ -7,7 +8,7 @@ interface PageErrorProps {
     className?: string;
 }
 
-export const PageError = ({ className }: PageErrorProps) => {
+export const PageError: FC<PageErrorProps> = ({ className }: PageErrorProps) => {
     const { t } = useTranslation();
 
     const reloadPage = () => {
@@ -16,8 +17,8 @@ export const PageError = ({ className }: PageErrorProps) => {
 
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
-            <p>{t('PageError')}</p>
-            <Button onClick={reloadPage} className={cls.ReloadBtn}>{t('UpdatePage')}</Button>
+            <p>{t('pageError.title')}</p>
+            <Button onClick={reloadPage} className={cls.ReloadBtn}>{t('pageError.btn')}</Button>
         </div>
     );
 };
