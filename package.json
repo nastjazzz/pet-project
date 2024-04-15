@@ -12,9 +12,10 @@
         "build:dev": "webpack --config webpack.config.ts --env mode=development",
         "build:prod": "webpack --config webpack.config.ts --env mode=production",
         "test:unit": "jest --config ./config/jest/jest.config.ts",
+        "test:ui": "npx loki test --port 40123",
+        "test:ui:ok": "npx loki test --port 40123 approve",
         "storybook": "start-storybook -p 40123 -c ./config/storybook ",
-        "build-storybook": "build-storybook -c ./config/storybook -s ./public ",
-        "loki": "loki test --port 40123"
+        "storybook:build": "build-storybook -c ./config/storybook -s ./public "
     },
     "repository": {
         "type": "git",
