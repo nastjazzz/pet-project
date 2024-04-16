@@ -44,6 +44,9 @@ jobs:
             
             - name: Build storybook
               run: npm run storybook:build
+
+            - name: Run loki
+              run: npm run test:ui
             
             - name: Screenshoot test
               run: npm run test:ui:ci
