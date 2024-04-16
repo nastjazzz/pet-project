@@ -22,17 +22,17 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
         }),
         // TODO don't need them in production
         new ReactRefreshWebpackPlugin(),
-        
+
     ];
-    
+
     if (options.isDev) {
         plugins.push(
             new BundleAnalyzerPlugin({
                 openAnalyzer: false,
             }),
             new webpack.HotModuleReplacementPlugin(),
-        )
+        );
     }
 
-    return plugins
+    return plugins;
 }

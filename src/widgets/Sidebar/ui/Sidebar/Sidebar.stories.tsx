@@ -1,8 +1,8 @@
-import { Sidebar } from './Sidebar';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import 'app/styles/index.scss';
+
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
+import { Sidebar } from './Sidebar';
 
 export default {
     title: 'widgets/Sidebar',
@@ -20,4 +20,3 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Themes.dark)];
-

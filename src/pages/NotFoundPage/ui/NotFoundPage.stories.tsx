@@ -1,8 +1,8 @@
-import { NotFoundPage } from './NotFoundPage';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
+import { NotFoundPage } from './NotFoundPage';
 
 export default {
     title: 'pages/NotFoundPage',
@@ -20,4 +20,3 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Themes.dark)];
-

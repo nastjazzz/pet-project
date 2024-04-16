@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { AppLink, AppLinkTheme } from './AppLink';
 import { Themes } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { AppLink, AppLinkTheme } from './AppLink';
 
 export default {
     title: 'shared/AppLink',
@@ -12,8 +12,8 @@ export default {
     },
     args: {
         to: '/',
-        children: 'Link Example'
-    }
+        children: 'Link Example',
+    },
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args: any) => { return <AppLink {...args} />; };
