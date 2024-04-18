@@ -1,13 +1,11 @@
 .sidebar {
     position: relative;
+    display: flex;
+    justify-content: center;
     height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
     transition: width 0.3s;
-}
-
-.collapsed {
-    width: var(--sidebar-width-collapsed);
 }
 
 .switchers {
@@ -19,4 +17,59 @@
     align-items: center;
     gap: 10px;
     justify-content: center;
+}
+
+.btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.arrow {
+    height: auto;
+}
+
+.collapsed .arrow {
+    transform: rotate(180deg);
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkText {
+    transition: opacity 0.2s;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--inverted-primary-color);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .link {
+        gap: 0;
+    }
+
+    .linkText {
+        opacity: 0;
+        width: 0;
+    }
 }

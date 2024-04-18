@@ -1,16 +1,17 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { renderWithTranslation } from 'shared/lib/helpers/tests/renderWithTranslation/renderWithTranslation';
+import { screen, fireEvent } from '@testing-library/react';
+import {
+    renderWithTranslationAndRouter,
+} from 'shared/lib/helpers/tests/renderWithTranslation/renderWithTranslationAndRouter';
 import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {
     test('find sidebar', () => {
-        renderWithTranslation(<Sidebar />);
+        renderWithTranslationAndRouter(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
     test('toggle sidebar', () => {
-        renderWithTranslation(<Sidebar />);
+        renderWithTranslationAndRouter(<Sidebar />);
 
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).not.toHaveClass('collapsed');

@@ -9,6 +9,7 @@ declare module '*.svg' {
 
     const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
     export default SVG;
+    // export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 declare module '*.png';
 declare module '*.jpg';

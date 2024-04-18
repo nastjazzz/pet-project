@@ -1,12 +1,13 @@
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton, classNames } from 'shared';
+import { Button, ButtonTheme, classNames } from 'shared';
 
 interface LangSwitcherProps {
     className?: string
+    short?: boolean
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({ className, short }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
     const changeLanguage = async (): Promise<void> => {
@@ -17,10 +18,10 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }: LangSwitcherP
         <div>
             <Button
                 className={classNames('', {}, [className])}
-                theme={ThemeButton.CLEAR}
+                theme={ButtonTheme.CLEAR}
                 onClick={changeLanguage}
             >
-                {t('language')}
+                {short ? t('langShort') : t('lang')}
             </Button>
         </div>
     );

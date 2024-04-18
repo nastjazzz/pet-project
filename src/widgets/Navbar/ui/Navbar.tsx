@@ -9,20 +9,11 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({ className }: NavbarProps) => {
-    const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
+    const { t } = useTranslation();
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={classNames(cls.links)}>
-                <AppLink to="/" theme={AppLinkTheme.SECONDARY} className={cls.link}>
-                    {t('mainPage')}
-                </AppLink>
-
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                <AppLink to="/about" theme={AppLinkTheme.SECONDARY} className={cls.link}>
-                    {t('aboutPage')}
-                </AppLink>
-            </div>
+            <div className={classNames(cls.links)} />
         </div>
     );
 };

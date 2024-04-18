@@ -1,19 +1,19 @@
 {
-    "navbar": {
-        "mainPage": "Main",
-        "aboutPage": "About"
-    },
-    "sidebar": {
-        "toggle": "Roll up",
-        "toggleCollapsed": "Unroll"
-    },
-    "pageError": {
-        "title": "Something went wrong",
-        "btn": "Reload page"
-    },
-    "language": "English",
+    "mainPage": "Main",
+    "aboutPage": "About",
+
+    "toggle": "Roll up",
+    "toggleCollapsed": "Unroll",
+
+    "lang": "English",
+    "langShort": "en",
+
     "NotFoundPage": "Page was not found",
+
     "Loading": "Loading...",
 
-    "ThrowError": "Throw error"
+    "ThrowError": "Throw error",
+
+    "errorTitle": "Something went wrong",
+    "errorBtn": "Reload page"
 }
