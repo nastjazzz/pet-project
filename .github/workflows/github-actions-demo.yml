@@ -1,53 +1,52 @@
 name: Linting, testing and build
 on:
-    workflow_dispatch:
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+  workflow_dispatch:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
-    integration:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [16.x]
-        steps:
-            - uses: actions/checkout@v2
-            - name: Setup Node.js environment
-              uses: actions/setup-node@v1
-              with:
-                node-version: ${{ matrix.node }}
+  integration:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
 
-            # - name: Cache node_modules
-            #   uses: actions/cache@v2.1.0
-            #   with:
-            #       # A list of files, directories, and wildcard patterns to cache and restore
-            #       path: node_modules
-            #       # An explicit key for restoring and saving the cache
-            #       key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+      # - name: Cache node_modules
+      #   uses: actions/cache@v2.1.0
+      #   with:
+      #       # A list of files, directories, and wildcard patterns to cache and restore
+      #       path: node_modules
+      #       # An explicit key for restoring and saving the cache
+      #       key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
 
-            - name: Install dependencies
-              if: steps.cache.outputs.cache-hit != 'true'
-              run: npm install
-            
-            - name: Build production project
-              run: npm run build:prod
-            
-            - name: Lint typescript
-              run: npm run lint
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
 
-            - name: Lint css
-              run: npm run stylelint
-            
-            - name: Run unit test
-              run: npm run test:unit
-            
-            - name: Build storybook
-              run: npm run storybook:build
+      - name: Build production project
+        run: npm run build:prod
 
-            - name: Run loki
-              run: npm run test:ui
-            
-            - name: Screenshoot test
-              run: npm run test:ui:ci
+      - name: Lint typescript
+        run: npm run lint
 
+      - name: Lint css
+        run: npm run stylelint
+
+      - name: Run unit test
+        run: npm run test:unit
+
+      - name: Build storybook
+        run: npm run storybook:build
+
+      # - name: Run loki
+      #   run: npm run test:ui
+
+      # - name: Screenshoot test
+      #   run: npm run test:ui:ci

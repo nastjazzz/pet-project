@@ -16,7 +16,8 @@
         "test:ui:ok": "npx loki test approve",
         "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --port 6006",
         "storybook": "start-storybook -c ./config/storybook -p 6006",
-        "storybook:build": "build-storybook -c ./config/storybook"
+        "storybook:build": "build-storybook -c ./config/storybook",
+        "check": "npm run lint:fix && npm run stylelint:fix && npm run test:unit"
     },
     "repository": {
         "type": "git",
