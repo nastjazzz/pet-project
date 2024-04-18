@@ -10,16 +10,13 @@ i18n.use(Backend)
     .init({
         fallbackLng: 'en',
         debug: __IS_DEV__,
-        load: 'languageOnly',
+
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
         },
         backend: {
-            loadPath: __IS_DEV__ ? undefined : './public/locales/{{lng}}/{{ns}}.json',
-            crossDomain: __IS_DEV__ ? undefined : true,
-            withCredentials: __IS_DEV__ ? undefined : true,
+            loadPath: '/locales/{{lng}}/{{ns}}.json',
         },
-        keySeparator: false,
     });
 
 export default i18n;
