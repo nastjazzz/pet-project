@@ -9,16 +9,16 @@ interface PageErrorProps {
 }
 
 export const PageError: FC<PageErrorProps> = ({ className }: PageErrorProps) => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    const reloadPage = () => {
-        window.location.reload();
-    };
+  const reloadPage = () => {
+    window.location.reload();
+  };
 
-    return (
-        <div className={classNames(cls.PageError, {}, [className])}>
-            <p>{t('errorTitle')}</p>
-            <Button onClick={reloadPage} className={cls.ReloadBtn}>{t('errorBtn')}</Button>
-        </div>
-    );
+  return (
+    <div className={classNames(cls.PageError, {}, [className])}>
+      <p>{t('errorTitle')}</p>
+      <Button onClick={reloadPage} className={cls.ReloadBtn}>{t('errorBtn')}</Button>
+    </div>
+  );
 };

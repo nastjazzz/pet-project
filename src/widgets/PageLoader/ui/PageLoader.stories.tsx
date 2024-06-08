@@ -5,12 +5,12 @@ import { Themes } from 'app/providers/ThemeProvider';
 import { PageLoader } from './PageLoader';
 
 export default {
-    title: 'widgets/PageLoader',
-    component: PageLoader,
+  title: 'widgets/PageLoader',
+  component: PageLoader,
 } as ComponentMeta<typeof PageLoader>;
 
 const Template: ComponentStory<typeof PageLoader> = (args: any) => {
-    return <PageLoader {...args} />;
+  return <PageLoader {...args} />;
 };
 
 export const Light = Template.bind({});

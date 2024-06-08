@@ -4,5 +4,5 @@ import { Button, ButtonTheme } from './ui/Button/Button';
 import { Loader } from './ui/Loader/Loader';
 
 export {
-    classNames, AppLink, AppLinkTheme, Button, ButtonTheme, Loader,
+  classNames, AppLink, AppLinkTheme, Button, ButtonTheme, Loader,
 };

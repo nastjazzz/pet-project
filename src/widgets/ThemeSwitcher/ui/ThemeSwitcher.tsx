@@ -9,22 +9,22 @@ interface ThemeSwitcherProps {
 }
 
 export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
-    const [isActive, setIsActive] = useState(false);
-    const { toggleTheme } = useTheme();
+  const [isActive, setIsActive] = useState(false);
+  const { toggleTheme } = useTheme();
 
-    const toggleSwitcher = () => {
-        toggleTheme();
-        setIsActive((prev) => { return !prev; });
-    };
+  const toggleSwitcher = () => {
+    toggleTheme();
+    setIsActive((prev) => { return !prev; });
+  };
 
-    return (
-        <div className={classNames(cls.sliderWrapper, {}, [])}>
-            {/* <input type="checkbox" className={classNames(cls.input)} name="themeSlider" /> */}
-            <span
-                className={classNames(cls.slider, { [cls.isActive]: isActive }, [])}
-                onClick={toggleSwitcher}
-                role="button"
-            />
-        </div>
-    );
+  return (
+    <div className={classNames(cls.sliderWrapper, {}, [])}>
+      {/* <input type="checkbox" className={classNames(cls.input)} name="themeSlider" /> */}
+      <span
+        className={classNames(cls.slider, { [cls.isActive]: isActive }, [])}
+        onClick={toggleSwitcher}
+        role="button"
+      />
+    </div>
+  );
 };

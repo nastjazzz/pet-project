@@ -9,11 +9,11 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({ className }: NavbarProps) => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    return (
-        <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={classNames(cls.links)} />
-        </div>
-    );
+  return (
+    <div className={classNames(cls.navbar, {}, [className])}>
+      <div className={classNames(cls.links)} />
+    </div>
+  );
 };

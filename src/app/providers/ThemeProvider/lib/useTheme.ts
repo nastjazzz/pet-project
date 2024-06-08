@@ -8,13 +8,13 @@ interface UserThemeResult {
 
 // my own hook
 export function useTheme(): UserThemeResult {
-    const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
-    const toggleTheme = (): void => {
-        const newTheme = theme === Themes.light ? Themes.dark : Themes.light;
-        setTheme(newTheme);
-        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-    };
+  const toggleTheme = (): void => {
+    const newTheme = theme === Themes.light ? Themes.dark : Themes.light;
+    setTheme(newTheme);
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+  };
 
-    return { theme, toggleTheme };
+  return { theme, toggleTheme };
 }
