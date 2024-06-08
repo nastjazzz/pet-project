@@ -1,66 +1,66 @@
 .themeSwitcher {
-    padding: 10px 20px;
-    background: var(--primary-color);
-    border: 1px solid #dedede;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 20px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  border: 1px solid #dedede;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 20px;
 }
 
 :root {
-    --slider-wrapper-width: 70px;
-    --slider-wrapper-height: 35px;
-    --slider-border-radius: 35px;
-    --slider-circle-size: 28px;
-    --slider-transition: 0.3s;
+  --slider-wrapper-width: 70px;
+  --slider-wrapper-height: 35px;
+  --slider-border-radius: 35px;
+  --slider-circle-size: 28px;
+  --slider-transition: 0.3s;
 }
 
 .sliderWrapper {
-    position: relative;
-    display: inline-block;
-    width: var(--slider-wrapper-width);
-    height: var(--slider-wrapper-height);
+  position: relative;
+  display: inline-block;
+  width: var(--slider-wrapper-width);
+  height: var(--slider-wrapper-height);
 }
 
 /* slider */
 .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    background-color: var(--secondary-color);
-    border-radius: var(--slider-border-radius);
-    transition: var(--slider-transition);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: var(--slider-border-radius);
+  transition: var(--slider-transition);
 }
 
 /* circle inside */
 .slider::before {
-    content: '';
-    position: absolute;
-    left: 3px;
-    top: 50%;
-    width: var(--slider-circle-size);
-    height: var(--slider-circle-size);
-    background-color: white;
-    border-radius: 50%;
-    background-image: url('/src/shared/assets/img/sun.svg');
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translateY(-50%);
-    transition: var(--slider-transition);
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  width: var(--slider-circle-size);
+  height: var(--slider-circle-size);
+  background-color: white;
+  border-radius: 50%;
+  background-image: url('/src/shared/assets/img/sun.svg');
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  transition: var(--slider-transition);
 }
 
 /* switched to the dark theme */
 .slider.isActive {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .slider.isActive::before {
-    transform: translateX(var(--slider-wrapper-height)) translateY(-50%);
-    background-color: #000;
-    background-size: 100%;
-    background-image: url('/src/shared/assets/img/moon.svg');
+  transform: translateX(var(--slider-wrapper-height)) translateY(-50%);
+  background-color: #000;
+  background-size: 100%;
+  background-image: url('/src/shared/assets/img/moon.svg');
 }

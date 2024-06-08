@@ -1,74 +1,74 @@
 .button {
-    cursor: pointer;
-    color: var(--inverted-primary-color);
+  cursor: pointer;
+  color: var(--inverted-primary-color);
 }
 
 .clear {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .border {
-    background: none;
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color);
+  background: none;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
 }
 
 .background {
-    background: var(--bg-color);
-    color: var(--primary-color);
-    border: 0;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: 0;
 }
 
 .backgroundInverted {
-    background: var(--inverted-bg-color);
-    color: var(--inverted-primary-color);
-    border: 0;
+  background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  border: 0;
 }
 
 .square {
-    padding: 0;
+  padding: 0;
 }
 
 .square.size_s {
-    width: var(--font-line-s);
-    height: var(--font-line-s);
-    font: var(--font-s);
+  width: var(--font-line-s);
+  height: var(--font-line-s);
+  font: var(--font-s);
 }
 
 .square.size_m {
-    width: var(--font-line-m);
-    height: var(--font-line-m);
-    font: var(--font-m);
+  width: var(--font-line-m);
+  height: var(--font-line-m);
+  font: var(--font-m);
 }
 
 .square.size_l {
-    width: var(--font-line-l);
-    height: var(--font-line-l);
-    font: var(--font-l);
+  width: var(--font-line-l);
+  height: var(--font-line-l);
+  font: var(--font-l);
 }
 
 .square.size_xl {
-    width: var(--font-line-xl);
-    height: var(--font-line-xl);
-    font: var(--font-xl);
+  width: var(--font-line-xl);
+  height: var(--font-line-xl);
+  font: var(--font-xl);
 }
 
 .size_s {
-    font: var(--font-s);
+  font: var(--font-s);
 }
 
 .size_m {
-    font: var(--font-m);
+  font: var(--font-m);
 }
 
 .size_l {
-    font: var(--font-l);
+  font: var(--font-l);
 }
 
 .size_xl {
-    font: var(--font-xl);
+  font: var(--font-xl);
 }

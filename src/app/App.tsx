@@ -4,6 +4,7 @@ import { AppRouter } from 'app/providers/router/';
 import { useTheme } from 'app/providers/ThemeProvider';
 
 import 'shared/config/i18n/i18n';
+import { Modal } from 'shared/ui/Modal/Modal';
 
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
@@ -18,6 +19,7 @@ const App: FC = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
+        <Modal />
         <div className="content-page">
           <Sidebar />
           <AppRouter />
