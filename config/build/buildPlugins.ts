@@ -17,9 +17,7 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].css',
     }),
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(options.isDev),
-    }),
+    new webpack.DefinePlugin({ __IS_DEV__: JSON.stringify(options.isDev) }),
     // TODO don't need them in production
     new ReactRefreshWebpackPlugin(),
 
@@ -27,9 +25,7 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
 
   if (options.isDev) {
     plugins.push(
-      new BundleAnalyzerPlugin({
-        openAnalyzer: false,
-      }),
+      new BundleAnalyzerPlugin({ openAnalyzer: false }),
       new webpack.HotModuleReplacementPlugin(),
     );
   }

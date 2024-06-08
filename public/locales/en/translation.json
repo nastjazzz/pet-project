@@ -1,19 +1,14 @@
 {
-    "mainPage": "Main",
-    "aboutPage": "About",
-
-    "toggle": "Roll up",
-    "toggleCollapsed": "Unroll",
-
-    "lang": "English",
-    "langShort": "en",
-
-    "NotFoundPage": "Page was not found",
-
-    "Loading": "Loading...",
-
-    "ThrowError": "Throw error",
-
-    "errorTitle": "Something went wrong",
-    "errorBtn": "Reload page"
+  "mainPage": "Main",
+  "aboutPage": "About",
+  "toggle": "Roll up",
+  "toggleCollapsed": "Unroll",
+  "lang": "English",
+  "langShort": "en",
+  "NotFoundPage": "Page was not found",
+  "Loading": "Loading...",
+  "ThrowError": "Throw error",
+  "errorTitle": "Something went wrong",
+  "errorBtn": "Reload page",
+  "Login": "Login"
 }

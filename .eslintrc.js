@@ -7,13 +7,11 @@ module.exports = {
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': [2, 2],
@@ -37,19 +35,52 @@ module.exports = {
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: [''] }],
-    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        onlyAttribute: [''],
+      },
+    ],
+    'max-len': [
+      'error',
+      {
+        ignoreComments: true,
+        code: 120,
+      },
+    ],
     'arrow-body-style': ['warn', 'always'],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        // consistent: true,
+        ObjectExpression: {
+          multiline: true,
+          minProperties: 3,
+        },
+        ObjectPattern: {
+          multiline: true,
+          minProperties: 3,
+        },
+        ImportDeclaration: {
+          multiline: true,
+          minProperties: 4,
+        },
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 3,
+        },
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
-  globals: {
-    __IS_DEV__: true,
-  },
+  globals: { __IS_DEV__: true },
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
-      rules: {
-        'i18next/no-literal-string': 'off',
-      },
+      rules: { 'i18next/no-literal-string': 'off' },
     },
   ],
 };

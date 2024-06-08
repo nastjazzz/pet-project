@@ -1,19 +1,14 @@
 {
-    "mainPage": "Главная",
-    "aboutPage": "О сайте",
-
-    "toggle": "Свернуть",
-    "toggleCollapsed": "Развернуть",
-
-    "lang": "Русский",
-    "langShort": "ру",
-
-    "NotFoundPage": "Страница не найдена",
-
-    "Loading": "Загрузка...",
-
-    "ThrowError": "Пробросить ошибку",
-
-    "errorTitle": "Что-то пошло не так",
-    "errorBtn": "Обновить страницу"
+  "mainPage": "Главная",
+  "aboutPage": "О сайте",
+  "toggle": "Свернуть",
+  "toggleCollapsed": "Развернуть",
+  "lang": "Русский",
+  "langShort": "ру",
+  "NotFoundPage": "Страница не найдена",
+  "Loading": "Загрузка...",
+  "ThrowError": "Пробросить ошибку",
+  "errorTitle": "Что-то пошло не так",
+  "errorBtn": "Обновить страницу",
+  "Login": "Войти"
 }

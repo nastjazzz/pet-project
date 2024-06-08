@@ -8,17 +8,13 @@ import { ButtonSize } from './Button';
 export default {
   title: 'shared/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: { backgroundColor: { control: 'color' } },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args: any) => { return <Button {...args} />; };
 
 export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Text',
-};
+Primary.args = { children: 'Text' };
 
 export const PrimarySizeS = Template.bind({});
 PrimarySizeS.args = {
@@ -45,23 +41,34 @@ PrimarySizeXL.args = {
 };
 
 export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-  children: 'Text',
-};
+PrimaryDark.args = { children: 'Text' };
 PrimaryDark.decorators = [ThemeDecorator(Themes.dark)];
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const Clear = Template.bind({});
+Clear.args = {
   children: 'Text',
   theme: ButtonTheme.CLEAR,
 };
 
-export const SecondaryDark = Template.bind({});
-SecondaryDark.args = {
+export const ClearDark = Template.bind({});
+ClearDark.args = {
   children: 'Text',
   theme: ButtonTheme.CLEAR,
 };
-SecondaryDark.decorators = [ThemeDecorator(Themes.dark)];
+ClearDark.decorators = [ThemeDecorator(Themes.dark)];
+
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+  children: 'Text',
+  theme: ButtonTheme.CLEAR_INVERTED,
+};
+
+export const ClearInvertedDark = Template.bind({});
+ClearInvertedDark.args = {
+  children: 'Text',
+  theme: ButtonTheme.CLEAR_INVERTED,
+};
+ClearInvertedDark.decorators = [ThemeDecorator(Themes.dark)];
 
 export const Bordered = Template.bind({});
 Bordered.args = {

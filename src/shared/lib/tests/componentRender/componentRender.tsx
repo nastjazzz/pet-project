@@ -9,9 +9,7 @@ export interface compenentRenderInterface {
 }
 
 export function componentRender(component: ReactNode, options: compenentRenderInterface = {}) {
-  const {
-    routes = ['/'],
-  } = options;
+  const { routes = ['/'] } = options;
 
   return render(
     <MemoryRouter initialEntries={routes}>
